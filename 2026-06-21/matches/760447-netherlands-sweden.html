@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>荷兰 5-1 瑞典</title>
+  <style>
+:root {
+  --bg: #f6f7f2;
+  --ink: #17201b;
+  --muted: #667069;
+  --panel: #ffffff;
+  --line: #dfe4dc;
+  --brand: #176b5d;
+  --brand-2: #b73e32;
+  --gold: #b8892c;
+  --blue: #315f9b;
+}
+* { box-sizing: border-box; }
+html { color-scheme: light; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.55;
+}
+a { color: inherit; text-decoration: none; }
+.shell { max-width: 1180px; margin: 0 auto; padding: 28px 20px 56px; }
+.topbar { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; margin-bottom: 22px; }
+.eyebrow { color: var(--brand); font-weight: 700; font-size: 13px; letter-spacing: .04em; text-transform: uppercase; }
+h1 { font-size: clamp(30px, 5vw, 54px); line-height: 1.05; margin: 6px 0 10px; letter-spacing: 0; }
+h2 { font-size: 22px; margin: 34px 0 14px; letter-spacing: 0; }
+h3 { font-size: 18px; margin: 22px 0 10px; letter-spacing: 0; }
+p { margin: 0 0 10px; }
+.meta { color: var(--muted); font-size: 14px; max-width: 760px; }
+.pillbar { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.pill { border: 1px solid var(--line); background: rgba(255,255,255,.7); border-radius: 999px; padding: 6px 10px; font-size: 13px; color: var(--muted); }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.cards-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  min-width: 0;
+  box-shadow: 0 1px 0 rgba(0,0,0,.03);
+}
+.card:hover { border-color: #c9d4cb; }
+.card-head { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
+.tag { font-size: 12px; border-radius: 999px; padding: 4px 8px; white-space: nowrap; background: #edf4f1; color: var(--brand); border: 1px solid #cfe0da; }
+.tag.warn { background: #fff3e0; color: #8a5b00; border-color: #efd8a8; }
+.tag.hot { background: #f9e8e4; color: var(--brand-2); border-color: #eac4bd; }
+.title { font-size: 18px; font-weight: 800; margin: 0 0 2px; }
+.score { font-size: 26px; font-weight: 900; margin: 8px 0 4px; color: var(--ink); }
+.sub { color: var(--muted); font-size: 13px; }
+.bullets { margin: 12px 0 0; padding: 0; list-style: none; display: grid; gap: 7px; }
+.bullets li { position: relative; padding-left: 16px; font-size: 14px; color: #2b342f; }
+.bullets li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--brand); position: absolute; left: 0; top: .65em; }
+.cta { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; color: var(--brand); font-weight: 700; font-size: 14px; }
+.section-note { color: var(--muted); margin-bottom: 14px; max-width: 880px; }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); }
+table { width: 100%; border-collapse: collapse; min-width: 620px; }
+th, td { padding: 10px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; font-size: 14px; }
+th { background: #eef2ed; font-size: 13px; color: #445049; }
+tr:last-child td { border-bottom: 0; }
+.hero-card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 18px; margin: 18px 0; }
+.hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 16px; align-items: start; }
+.mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 14px 0; }
+.metric { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 14px; }
+.metric-label { color: var(--muted); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+.metric-value { font-size: 18px; font-weight: 900; margin: 4px 0 6px; }
+.statline { color: var(--muted); font-size: 14px; margin-top: 6px; }
+.timeline { display: grid; gap: 12px; }
+.goal { display: grid; grid-template-columns: 72px 1fr; gap: 12px; padding: 14px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
+.minute { font-weight: 900; color: var(--brand-2); font-size: 18px; }
+.goal strong { display: block; margin-bottom: 4px; }
+.back { display: inline-flex; margin-bottom: 14px; color: var(--brand); font-weight: 700; }
+.footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+.empty { color: var(--muted); padding: 14px; background: var(--panel); border: 1px dashed var(--line); border-radius: 8px; }
+@media (max-width: 820px) {
+  .shell { padding: 20px 14px 42px; }
+  .topbar { display: block; }
+  .grid, .cards-3, .hero-grid, .mini-grid { grid-template-columns: 1fr; }
+  .card { padding: 14px; }
+  .score { font-size: 22px; }
+  .goal { grid-template-columns: 54px 1fr; }
+}
+</style>
+</head>
+<body>
+  <main class="shell">
+    
+<a class="back" href="../index.html">← 返回日报首页</a>
+<div class="eyebrow">已完赛复盘</div>
+<h1>荷兰 5-1 瑞典</h1>
+<p class="meta">荷兰把“必须赢”打成了强势修正局</p>
+<div class="hero-card hero-grid">
+  <div>
+    <h2>简报</h2>
+    <ul class="bullets"><li>荷兰 10 射 7 正进 5 球，效率极高。</li><li>前三球全部来自边路传中或近门包抄，瑞典禁区盯人连续失效。</li><li>瑞典 16 射 8 正并非没有进攻，Elanga 的进球说明反击仍有威胁。</li><li>瑞典 3 张黄牌，比分落后后的纪律和防守动作成本上升。</li></ul>
+  </div>
+  <div>
+    <h2>技术统计</h2>
+    <p class="statline">荷兰 50.9% 控球、10 射 7 正、2 角球、9 犯规；瑞典 49.1% 控球、16 射 8 正、5 角球、12 犯规。</p>
+    <h3>核心修正</h3>
+    <p>方向命中但比分严重低估荷兰上限。荷兰边路传中和转换质量大幅上调；瑞典防线面对强队速度和传中时的稳定性下调。</p>
+  </div>
+</div>
+<h2>半场趋势</h2>
+<div class="mini-grid">
+  <div class="metric">
+    <div class="metric-label">First half</div>
+    <div class="metric-value">荷兰 2-0 瑞典</div>
+    <p>荷兰 5&#x27; 和 17&#x27; 连续用边路传中打到近门点，说明开局专注度、边路执行和禁区包抄都很强。瑞典上半场不是没有进攻，但防线进入比赛慢，对重复传中模式没有及时修正。</p>
+    <p><b>后续影响：</b>后续预测荷兰可上调上半场先手能力；瑞典面对强队时上半场早丢球风险上调。</p>
+  </div>
+  <div class="metric">
+    <div class="metric-label">Second half</div>
+    <div class="metric-value">荷兰 3-1 瑞典</div>
+    <p>荷兰下半场开局再次进球，随后利用瑞典压上后的空间打反击。瑞典 59&#x27; 的进球证明反击威胁仍在，但 89&#x27; 再丢球显示体能和防守层次下降。</p>
+    <p><b>后续影响：</b>荷兰下半场继续进球能力上调；瑞典落后后风险管理和后程防守稳定性下调。</p>
+  </div>
+</div>
+<h2>罚牌纪律</h2>
+<div class="metric">
+  <div class="metric-label">Cards</div>
+  <div class="metric-value">瑞典 3 黄，荷兰 0 黄。</div>
+  <p>瑞典黄牌集中在 53&#x27;、75&#x27;、80&#x27;，基本发生在比分大幅落后后，说明追分阶段防守动作变形。荷兰犯规 9 次但无牌，比赛控制更干净。</p>
+  <p><b>后续影响：</b>瑞典后续落后局的牌数预期上调；荷兰在领先控场局的牌数预期下调。</p>
+</div>
+<h2>每粒进/失球原因</h2>
+<div class="timeline">
+<div class="goal">
+  <div class="minute">5&#x27;</div>
+  <div>
+    <strong>荷兰 1-0｜Brobbey 近距离破门，Gakpo 传中助攻。</strong>
+    <p><b>原因：</b>左路传中后禁区内近门点盯人丢失，瑞典中卫与边翼卫没有保护第一落点。</p>
+    <p><b>判断影响：</b>上调荷兰边路传中质量和 Brobbey 门前价值；下调瑞典开局防守专注度。</p>
+  </div>
+</div>
+
+<div class="goal">
+  <div class="minute">17&#x27;</div>
+  <div>
+    <strong>荷兰 2-0｜Brobbey 再次近距离破门，Dumfries 传中助攻。</strong>
+    <p><b>原因：</b>荷兰右路重复打出传中，瑞典对同一进攻模式没有及时修正。</p>
+    <p><b>判断影响：</b>确认荷兰两翼都能稳定供球；瑞典禁区防传中能力需要重新评估。</p>
+  </div>
+</div>
+
+<div class="goal">
+  <div class="minute">47&#x27;</div>
+  <div>
+    <strong>荷兰 3-0｜Gakpo 近距离得分，Dumfries 再送传中。</strong>
+    <p><b>原因：</b>下半场刚开始瑞典防线再次被右路传中打穿，半场调整失败。</p>
+    <p><b>判断影响：</b>荷兰比赛计划可复制性上调；瑞典教练组临场修正能力下调。</p>
+  </div>
+</div>
+
+<div class="goal">
+  <div class="minute">54&#x27;</div>
+  <div>
+    <strong>荷兰 4-0｜Gakpo 接 Summerville 快速反击助攻破门。</strong>
+    <p><b>原因：</b>瑞典压上追分后中后场身后空间暴露，荷兰用速度直接惩罚。</p>
+    <p><b>判断影响：</b>荷兰不仅能控场，也能在开放局杀伤；瑞典落后后的风险管理下调。</p>
+  </div>
+</div>
+
+<div class="goal">
+  <div class="minute">59&#x27;</div>
+  <div>
+    <strong>荷兰 4-1｜Elanga 接 Isak 直塞反击得分。</strong>
+    <p><b>原因：</b>荷兰领先后防线站位偏高，瑞典通过 Isak 的纵向传球打到身后。</p>
+    <p><b>判断影响：</b>保留瑞典进攻威胁评价；荷兰零封能力和高位身后保护仍需谨慎。</p>
+  </div>
+</div>
+
+<div class="goal">
+  <div class="minute">89&#x27;</div>
+  <div>
+    <strong>荷兰 5-1｜Summerville 接 Depay 助攻远射/禁区外破门。</strong>
+    <p><b>原因：</b>瑞典体能和防守层次下降，禁区弧附近给了起脚空间。</p>
+    <p><b>判断影响：</b>荷兰替补和终场阶段进攻深度上调；瑞典后程防守稳定性下调。</p>
+  </div>
+</div>
+</div>
+<h2>前日预测复盘</h2>
+<div class="table-wrap"><table><tbody><tr><th>前日预测</th><td>荷兰 2-1 瑞典｜荷兰 43% / 平 27% / 瑞典 30%｜信心 中</td></tr><tr><th>实际结果</th><td>荷兰 5-1 瑞典</td></tr><tr><th>预测命中</th><td>胜负方向命中。</td></tr><tr><th>主要偏差</th><td>低估荷兰边路执行和 Brobbey/Gakpo 的禁区终结，也高估瑞典首轮 5-1 的防守可迁移性。</td></tr><tr><th>模型修正</th><td>荷兰上调为 F 组头名级表现；瑞典进攻不降太多，但防线抗强队能力明显下修。</td></tr></tbody></table></div>
+<div class="footer">
+  数据源：ESPN 公共 summary/scoreboard 缓存；FIFA 官方 PMSR 本次生成时尚未逐场完成校验。分析基于事件文本、射门位置描述和技术统计，不冒充视频逐帧判断。
+</div>
+
+  </main>
+</body>
+</html>
