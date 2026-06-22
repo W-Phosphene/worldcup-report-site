@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>世界杯日报 2026-06-22</title>
+  <style>
+:root {
+  --bg: #f6f7f2;
+  --ink: #17201b;
+  --muted: #667069;
+  --panel: #ffffff;
+  --line: #dfe4dc;
+  --brand: #176b5d;
+  --brand-2: #b73e32;
+  --gold: #b8892c;
+  --blue: #315f9b;
+}
+* { box-sizing: border-box; }
+html { color-scheme: light; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.55;
+}
+a { color: inherit; text-decoration: none; }
+.shell { max-width: 1180px; margin: 0 auto; padding: 28px 20px 56px; }
+.topbar { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; margin-bottom: 22px; }
+.eyebrow { color: var(--brand); font-weight: 700; font-size: 13px; letter-spacing: .04em; text-transform: uppercase; }
+h1 { font-size: clamp(30px, 5vw, 54px); line-height: 1.05; margin: 6px 0 10px; letter-spacing: 0; }
+h2 { font-size: 22px; margin: 34px 0 14px; letter-spacing: 0; }
+h3 { font-size: 18px; margin: 22px 0 10px; letter-spacing: 0; }
+p { margin: 0 0 10px; }
+.meta { color: var(--muted); font-size: 14px; max-width: 780px; }
+.pillbar { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.pill { border: 1px solid var(--line); background: rgba(255,255,255,.7); border-radius: 999px; padding: 6px 10px; font-size: 13px; color: var(--muted); }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.cards-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  min-width: 0;
+  box-shadow: 0 1px 0 rgba(0,0,0,.03);
+}
+.card:hover { border-color: #c9d4cb; }
+.card-head { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
+.tag { font-size: 12px; border-radius: 999px; padding: 4px 8px; white-space: nowrap; background: #edf4f1; color: var(--brand); border: 1px solid #cfe0da; }
+.tag.warn { background: #fff3e0; color: #8a5b00; border-color: #efd8a8; }
+.tag.hot { background: #f9e8e4; color: var(--brand-2); border-color: #eac4bd; }
+.title { font-size: 18px; font-weight: 800; margin: 0 0 2px; }
+.score { font-size: 26px; font-weight: 900; margin: 8px 0 4px; color: var(--ink); }
+.sub { color: var(--muted); font-size: 13px; }
+.bullets { margin: 12px 0 0; padding: 0; list-style: none; display: grid; gap: 7px; }
+.bullets li { position: relative; padding-left: 16px; font-size: 14px; color: #2b342f; }
+.bullets li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--brand); position: absolute; left: 0; top: .65em; }
+.cta { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; color: var(--brand); font-weight: 700; font-size: 14px; }
+.section-note { color: var(--muted); margin-bottom: 14px; max-width: 900px; }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); }
+table { width: 100%; border-collapse: collapse; min-width: 680px; }
+th, td { padding: 10px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; font-size: 14px; }
+th { background: #eef2ed; font-size: 13px; color: #445049; }
+tr:last-child td { border-bottom: 0; }
+.hero-card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 18px; margin: 18px 0; }
+.hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 16px; align-items: start; }
+.mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 14px 0; }
+.metric { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 14px; }
+.metric-label { color: var(--muted); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+.metric-value { font-size: 18px; font-weight: 900; margin: 4px 0 6px; }
+.statline { color: var(--muted); font-size: 14px; margin-top: 6px; }
+.timeline { display: grid; gap: 12px; }
+.goal { display: grid; grid-template-columns: 72px 1fr; gap: 12px; padding: 14px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
+.minute { font-weight: 900; color: var(--brand-2); font-size: 18px; }
+.goal strong { display: block; margin-bottom: 4px; }
+.back { display: inline-flex; margin-bottom: 14px; color: var(--brand); font-weight: 700; }
+.footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+@media (max-width: 820px) {
+  .shell { padding: 20px 14px 42px; }
+  .topbar { display: block; }
+  .grid, .cards-3, .hero-grid, .mini-grid { grid-template-columns: 1fr; }
+  .card { padding: 14px; }
+  .score { font-size: 22px; }
+  .goal { grid-template-columns: 54px 1fr; }
+}
+</style>
+</head>
+<body><main class="shell">
+<div class="topbar">
+  <div>
+    <div class="eyebrow">World Cup Daily · 2026-06-22</div>
+    <h1>世界杯日报：H/G 组第二轮复盘与 I/J 组赛前预测</h1>
+    <p class="meta">本页提前生成于北京时间 2026-06-22。重点复盘西班牙大胜、比利时红牌平局、乌拉圭被佛得角逼平、埃及下半场逆转，并给出下一窗口四场赛前预测。</p>
+    <div class="pillbar">
+      <span class="pill">已完赛 4 场</span>
+      <span class="pill">即将预测 4 场</span>
+      <span class="pill">上下半场拆分</span>
+      <span class="pill">罚牌基准与分支</span>
+      <span class="pill">出线形势入模</span>
+      <span class="pill">ESPN 公共接口</span>
+    </div>
+  </div>
+</div>
+<section>
+  <h2>已完赛场次分析</h2>
+  <p class="section-note">四场里最大修正是乌拉圭 2-2 佛得角：佛得角不只是低位防守，已经连续从西班牙和乌拉圭身上拿分。</p>
+  <div class="grid">
+<a class="card" href="matches/760453-spain-saudi-arabia.html">
+  <div class="card-head"><div><div class="title">西班牙 4-0 沙特</div><div class="sub">终结效率从首轮低迷直接修正为大胜</div></div><span class="tag ">方向命中</span></div>
+  <div class="score">西班牙 4-0 沙特</div>
+  <p class="sub">上半场：西班牙 3-0 沙特；下半场：西班牙 1-0 沙特</p>
+  <p class="sub">罚牌：沙特 2 黄，西班牙 0 黄。实际落在预测 2-4 张内，且低牌触发条件部分兑现：西班牙早早领先后比赛对抗没有继续升温。</p>
+  <ul class="bullets"><li>胜负方向和零封命中，但比分上限明显低估。</li><li>西班牙 10&#x27;、21&#x27;、24&#x27; 三球杀死比赛，开局压制和门前效率大幅上调。</li><li>沙特犯规少但吃 2 黄，说明被动横移下关键对抗成本仍高。</li><li>H 组西班牙 4 分领跑，第三轮主动权大幅提升。</li></ul>
+  <span class="cta">查看详情 →</span>
+</a>
+
+<a class="card" href="matches/760451-belgium-iran.html">
+  <div class="card-head"><div><div class="title">比利时 0-0 伊朗</div><div class="sub">比利时机会量很大，但红牌和终结问题让预测落空</div></div><span class="tag warn">偏差复盘</span></div>
+  <div class="score">比利时 0-0 伊朗</div>
+  <p class="sub">上半场：比利时 0-0 伊朗；下半场：比利时 0-0 伊朗</p>
+  <p class="sub">罚牌：2 黄 + 1 红，数量低于 4-6 预测，但严重程度高于普通低牌局。后续不能只看总牌数，比利时红牌风险需要单独记录。</p>
+  <ul class="bullets"><li>预测方向错误，低估伊朗低位防守和门将抗压。</li><li>比利时 23 射 7 正仍 0 进球，进攻效率继续低于纸面实力。</li><li>66&#x27; Nathan Ngoy 红牌改变下半场风险，比利时纪律风险上调。</li><li>G 组埃及 4 分领跑，伊朗/比利时都还有出线机会但压力不同。</li></ul>
+  <span class="cta">查看详情 →</span>
+</a>
+
+<a class="card" href="matches/760450-uruguay-cape-verde.html">
+  <div class="card-head"><div><div class="title">乌拉圭 2-2 佛得角</div><div class="sub">最大修正局：佛得角不是只会守，乌拉圭射门质量问题扩大</div></div><span class="tag warn">偏差复盘</span></div>
+  <div class="score">乌拉圭 2-2 佛得角</div>
+  <p class="sub">上半场：乌拉圭 2-1 佛得角；下半场：乌拉圭 0-1 佛得角</p>
+  <p class="sub">罚牌：双方各 2 黄，实际 4 张命中 3-4 主区间。比赛并未失控，但关键犯规直接带来佛得角任意球进球。</p>
+  <ul class="bullets"><li>预测方向错误，乌拉圭 2 射正进 2 球但没有稳定压制出高质量射正。</li><li>佛得角继 0-0 西班牙后又逼平乌拉圭，防守韧性和反击/定位球威胁都上调。</li><li>Kevin Pina 任意球和 Helio Varela 禁区外凌空说明佛得角并非纯低位挨打。</li><li>H 组西班牙 4 分领跑，乌拉圭和佛得角同 2 分，第三轮压力很实在。</li></ul>
+  <span class="cta">查看详情 →</span>
+</a>
+
+<a class="card" href="matches/760452-new-zealand-egypt.html">
+  <div class="card-head"><div><div class="title">新西兰 1-3 埃及</div><div class="sub">方向命中，但埃及下半场上限高于预测</div></div><span class="tag ">方向命中</span></div>
+  <div class="score">新西兰 1-3 埃及</div>
+  <p class="sub">上半场：新西兰 1-0 埃及；下半场：新西兰 0-3 埃及</p>
+  <p class="sub">罚牌：全场 3 黄，落在 3-5 区间下沿；新西兰犯规 14 次、2 黄，支点和二点球对抗带来纪律成本。</p>
+  <ul class="bullets"><li>埃及胜负方向命中，但比分从 2-1 被扩大到 3-1。</li><li>新西兰 15&#x27; 角球头球先手，说明定位球威胁仍然真实。</li><li>埃及 58&#x27;、67&#x27;、82&#x27; 连进三球，Salah 和 Zico 带动下半场爆发。</li><li>G 组埃及 4 分领跑，下一轮更有主动权。</li></ul>
+  <span class="cta">查看详情 →</span>
+</a>
+</div>
+</section>
+<section>
+  <h2>前日预测复盘</h2>
+  <p class="section-note">西班牙和埃及方向命中；比利时和乌拉圭方向错误。模型需要下调“机会量自动转化为胜势”的权重。</p>
+  <div class="table-wrap"><table><thead><tr><th>比赛</th><th>前日预测</th><th>实际结果</th><th>复盘结论</th></tr></thead><tbody><tr><td>西班牙 vs 沙特</td><td>西班牙 2-0 沙特</td><td>西班牙 4-0 沙特</td><td>方向命中，比分低估</td></tr><tr><td>比利时 vs 伊朗</td><td>比利时 2-1 伊朗</td><td>比利时 0-0 伊朗</td><td>方向错误，低估伊朗防守</td></tr><tr><td>乌拉圭 vs 佛得角</td><td>乌拉圭 2-0 佛得角</td><td>乌拉圭 2-2 佛得角</td><td>方向错误，低估佛得角进攻</td></tr><tr><td>新西兰 vs 埃及</td><td>新西兰 1-2 埃及</td><td>新西兰 1-3 埃及</td><td>方向命中，比分低估</td></tr></tbody></table></div>
+</section>
+<section>
+  <h2>即将进行比赛预测</h2>
+  <p class="section-note">I/J 组第二轮开始出现明显出线分叉：法国/挪威/阿根廷/奥地利争主动，伊拉克/塞内加尔/约旦/阿尔及利亚都不能轻易再输。</p>
+  <div class="grid">
+<a class="card" href="matches/760456-argentina-austria.html">
+  <div class="card-head"><div><div class="title">阿根廷 vs 奥地利</div><div class="sub">2026-06-23 01:00 北京时间</div></div><span class="tag">预测</span></div>
+  <div class="score">阿根廷 2-1 奥地利</div>
+  <p class="sub">阿根廷 53% / 平 27% / 奥地利 20% · 信心 中</p>
+  <p class="sub">上半场：阿根廷 1-0 奥地利；下半场：阿根廷 1-1 奥地利</p>
+  <p class="sub">罚牌：3-5 张（基准 4 张）</p>
+  <p class="sub">J 组：阿根廷和奥地利首轮同取 3 分，约旦与阿尔及利亚 0 分。阿根廷/奥地利直接对话决定头名主动，约旦/阿尔及利亚是保留第三名希望的生死局。</p>
+  <ul class="bullets"><li>阿根廷首轮 3-0 阿尔及利亚，Messi 包办三球，个人状态直接抬高胜率。</li><li>奥地利 3-1 约旦，但 50&#x27; 被反击打穿，面对更强转换要谨慎。</li><li>两队都有 3 分，平局并非灾难；这会降低无脑对攻概率。</li><li>阿根廷更可能靠关键球质量赢，但大胜未必是主分支。</li></ul>
+  <span class="cta">查看赛前分析 →</span>
+</a>
+
+<a class="card" href="matches/760457-france-iraq.html">
+  <div class="card-head"><div><div class="title">法国 vs 伊拉克</div><div class="sub">2026-06-23 05:00 北京时间</div></div><span class="tag">预测</span></div>
+  <div class="score">法国 3-0 伊拉克</div>
+  <p class="sub">法国 68% / 平 20% / 伊拉克 12% · 信心 中高</p>
+  <p class="sub">上半场：法国 1-0 伊拉克；下半场：法国 2-0 伊拉克</p>
+  <p class="sub">罚牌：3-5 张（基准 4 张）</p>
+  <p class="sub">I 组：挪威和法国首轮同取 3 分，伊拉克与塞内加尔 0 分。第二轮法国/挪威赢球就基本锁定出线主动，伊拉克/塞内加尔必须拿分。</p>
+  <ul class="bullets"><li>法国首轮 3-1 塞内加尔，66&#x27; 后才打开局面，后程火力强。</li><li>伊拉克 1-4 挪威，射门不少但只有 1 射正，防空和定位球问题明显。</li><li>伊拉克已经 0 分，不能只守；这会给法国反击空间。</li><li>法国若领先，出线主动权基本到手，后程仍有二次打击能力。</li></ul>
+  <span class="cta">查看赛前分析 →</span>
+</a>
+
+<a class="card" href="matches/760454-norway-senegal.html">
+  <div class="card-head"><div><div class="title">挪威 vs 塞内加尔</div><div class="sub">2026-06-23 08:00 北京时间</div></div><span class="tag">预测</span></div>
+  <div class="score">挪威 2-1 塞内加尔</div>
+  <p class="sub">挪威 45% / 平 29% / 塞内加尔 26% · 信心 中低</p>
+  <p class="sub">上半场：挪威 1-0 塞内加尔；下半场：挪威 1-1 塞内加尔</p>
+  <p class="sub">罚牌：2-4 张（基准 3 张）</p>
+  <p class="sub">I 组：挪威和法国首轮同取 3 分，伊拉克与塞内加尔 0 分。第二轮法国/挪威赢球就基本锁定出线主动，伊拉克/塞内加尔必须拿分。</p>
+  <ul class="bullets"><li>挪威首轮 4-1 伊拉克，Haaland 双响，角球和传中威胁非常明确。</li><li>塞内加尔能把法国拖到 66&#x27; 后，但末段连丢球，后程防守被下调。</li><li>塞内加尔 0 分，平局价值有限，会提高下半场开放度。</li><li>挪威强点明显，但防线也被伊拉克头球打穿过。</li></ul>
+  <span class="cta">查看赛前分析 →</span>
+</a>
+
+<a class="card" href="matches/760455-jordan-algeria.html">
+  <div class="card-head"><div><div class="title">约旦 vs 阿尔及利亚</div><div class="sub">2026-06-23 11:00 北京时间</div></div><span class="tag">预测</span></div>
+  <div class="score">约旦 1-1 阿尔及利亚</div>
+  <p class="sub">约旦 30% / 平 34% / 阿尔及利亚 36% · 信心 低</p>
+  <p class="sub">上半场：约旦 0-0 阿尔及利亚；下半场：约旦 1-1 阿尔及利亚</p>
+  <p class="sub">罚牌：3-5 张（基准 4 张）</p>
+  <p class="sub">J 组：阿根廷和奥地利首轮同取 3 分，约旦与阿尔及利亚 0 分。阿根廷/奥地利直接对话决定头名主动，约旦/阿尔及利亚是保留第三名希望的生死局。</p>
+  <ul class="bullets"><li>两队首轮都 0 分，这是保留第三名机会的关键战。</li><li>约旦对奥地利 11 射 4 正，反击质量并不差。</li><li>阿尔及利亚对阿根廷控球 52.2%，但 7 射 1 正，终结问题明显。</li><li>双方都不能轻易输，平局概率偏高。</li></ul>
+  <span class="cta">查看赛前分析 →</span>
+</a>
+</div>
+</section>
+<section>
+  <h2>今日模型修正</h2>
+  <div class="cards-3">
+    <div class="card"><div class="title">上调</div><ul class="bullets"><li>西班牙上半场终结修正</li><li>埃及下半场进攻爆发</li><li>佛得角定位球和外围射门威胁</li></ul></div>
+    <div class="card"><div class="title">下调</div><ul class="bullets"><li>乌拉圭射门质量和控局</li><li>比利时终结效率与纪律</li><li>新西兰 60 分钟后防守稳定性</li></ul></div>
+    <div class="card"><div class="title">重点保留</div><ul class="bullets"><li>伊朗低位防守和抗压</li><li>沙特对强控队早崩风险</li><li>罚牌要看严重程度而不只看数量</li></ul></div>
+  </div>
+</section>
+<div class="footer">原始 JSON 缓存在 work/worldcup_daily/2026-06-22/raw/；状态文件写入 work/worldcup_daily/state.json。所有内容仅用于赛事讨论。</div>
+</main></body>
+</html>

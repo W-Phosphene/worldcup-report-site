@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>挪威 vs 塞内加尔</title>
+  <style>
+:root {
+  --bg: #f6f7f2;
+  --ink: #17201b;
+  --muted: #667069;
+  --panel: #ffffff;
+  --line: #dfe4dc;
+  --brand: #176b5d;
+  --brand-2: #b73e32;
+  --gold: #b8892c;
+  --blue: #315f9b;
+}
+* { box-sizing: border-box; }
+html { color-scheme: light; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.55;
+}
+a { color: inherit; text-decoration: none; }
+.shell { max-width: 1180px; margin: 0 auto; padding: 28px 20px 56px; }
+.topbar { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; margin-bottom: 22px; }
+.eyebrow { color: var(--brand); font-weight: 700; font-size: 13px; letter-spacing: .04em; text-transform: uppercase; }
+h1 { font-size: clamp(30px, 5vw, 54px); line-height: 1.05; margin: 6px 0 10px; letter-spacing: 0; }
+h2 { font-size: 22px; margin: 34px 0 14px; letter-spacing: 0; }
+h3 { font-size: 18px; margin: 22px 0 10px; letter-spacing: 0; }
+p { margin: 0 0 10px; }
+.meta { color: var(--muted); font-size: 14px; max-width: 780px; }
+.pillbar { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.pill { border: 1px solid var(--line); background: rgba(255,255,255,.7); border-radius: 999px; padding: 6px 10px; font-size: 13px; color: var(--muted); }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.cards-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  min-width: 0;
+  box-shadow: 0 1px 0 rgba(0,0,0,.03);
+}
+.card:hover { border-color: #c9d4cb; }
+.card-head { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
+.tag { font-size: 12px; border-radius: 999px; padding: 4px 8px; white-space: nowrap; background: #edf4f1; color: var(--brand); border: 1px solid #cfe0da; }
+.tag.warn { background: #fff3e0; color: #8a5b00; border-color: #efd8a8; }
+.tag.hot { background: #f9e8e4; color: var(--brand-2); border-color: #eac4bd; }
+.title { font-size: 18px; font-weight: 800; margin: 0 0 2px; }
+.score { font-size: 26px; font-weight: 900; margin: 8px 0 4px; color: var(--ink); }
+.sub { color: var(--muted); font-size: 13px; }
+.bullets { margin: 12px 0 0; padding: 0; list-style: none; display: grid; gap: 7px; }
+.bullets li { position: relative; padding-left: 16px; font-size: 14px; color: #2b342f; }
+.bullets li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--brand); position: absolute; left: 0; top: .65em; }
+.cta { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; color: var(--brand); font-weight: 700; font-size: 14px; }
+.section-note { color: var(--muted); margin-bottom: 14px; max-width: 900px; }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); }
+table { width: 100%; border-collapse: collapse; min-width: 680px; }
+th, td { padding: 10px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; font-size: 14px; }
+th { background: #eef2ed; font-size: 13px; color: #445049; }
+tr:last-child td { border-bottom: 0; }
+.hero-card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 18px; margin: 18px 0; }
+.hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 16px; align-items: start; }
+.mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 14px 0; }
+.metric { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 14px; }
+.metric-label { color: var(--muted); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+.metric-value { font-size: 18px; font-weight: 900; margin: 4px 0 6px; }
+.statline { color: var(--muted); font-size: 14px; margin-top: 6px; }
+.timeline { display: grid; gap: 12px; }
+.goal { display: grid; grid-template-columns: 72px 1fr; gap: 12px; padding: 14px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
+.minute { font-weight: 900; color: var(--brand-2); font-size: 18px; }
+.goal strong { display: block; margin-bottom: 4px; }
+.back { display: inline-flex; margin-bottom: 14px; color: var(--brand); font-weight: 700; }
+.footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+@media (max-width: 820px) {
+  .shell { padding: 20px 14px 42px; }
+  .topbar { display: block; }
+  .grid, .cards-3, .hero-grid, .mini-grid { grid-template-columns: 1fr; }
+  .card { padding: 14px; }
+  .score { font-size: 22px; }
+  .goal { grid-template-columns: 54px 1fr; }
+}
+</style>
+</head>
+<body><main class="shell">
+<a class="back" href="../index.html">← 返回日报首页</a>
+<div class="eyebrow">即将进行</div>
+<h1>挪威 vs 塞内加尔</h1>
+<p class="meta">2026-06-23 08:00 北京时间</p>
+<div class="hero-card hero-grid">
+  <div><h2>赛果预测</h2><div class="score">挪威 2-1 塞内加尔</div><p class="statline">挪威 45% / 平 29% / 塞内加尔 26% · 信心 中低</p><h3>关键判断</h3><ul class="bullets"><li>挪威首轮 4-1 伊拉克，Haaland 双响，角球和传中威胁非常明确。</li><li>塞内加尔能把法国拖到 66&#x27; 后，但末段连丢球，后程防守被下调。</li><li>塞内加尔 0 分，平局价值有限，会提高下半场开放度。</li><li>挪威强点明显，但防线也被伊拉克头球打穿过。</li></ul></div>
+  <div><h2>积分与战意</h2><p>挪威和法国首轮同取 3 分，伊拉克与塞内加尔 0 分。第二轮法国/挪威赢球就基本锁定出线主动，伊拉克/塞内加尔必须拿分。</p><h3>主要风险</h3><p>塞内加尔反击速度能挑战挪威防线，若先进球会显著改变比赛。</p></div>
+</div>
+<h2>半场预测</h2>
+<div class="mini-grid">
+  <div class="metric"><div class="metric-label">First half</div><div class="metric-value">挪威 1-0 塞内加尔</div><p>重点看开局专注度、初始战术兑现和先手能力。</p></div>
+  <div class="metric"><div class="metric-label">Second half</div><div class="metric-value">挪威 1-1 塞内加尔</div><p>重点看 60 分钟后体能、替补深度和比分状态下的打法变化。</p></div>
+</div>
+<h2>罚牌预测</h2>
+<div class="metric">
+  <div class="metric-label">Card prediction</div>
+  <div class="metric-value">2-4 张｜基准 3 张</div>
+  <p><b>倾向：</b>塞内加尔略高</p>
+  <div class="mini-grid">
+    <div class="metric"><div class="metric-label">低牌触发</div><p>挪威早进球后降速，塞内加尔进攻组织不连续。</p></div>
+    <div class="metric"><div class="metric-label">高牌触发</div><p>塞内加尔末段必须追分，边路冲刺和禁区前破坏增加。</p></div>
+  </div>
+</div>
+<h2>当前出线形势与积分排名</h2>
+<p class="section-note">挪威和法国首轮同取 3 分，伊拉克与塞内加尔 0 分。第二轮法国/挪威赢球就基本锁定出线主动，伊拉克/塞内加尔必须拿分。</p>
+<div class="table-wrap"><table>
+<thead><tr><th>球队</th><th>赛</th><th>分</th><th>净胜</th><th>进失球</th><th>当前判断</th></tr></thead>
+<tbody><tr><td>挪威</td><td>1</td><td>3</td><td>+3</td><td>4-1</td><td>Haaland 与定位球强势</td></tr><tr><td>法国</td><td>1</td><td>3</td><td>+2</td><td>3-1</td><td>下半场和补时杀伤强</td></tr><tr><td>塞内加尔</td><td>1</td><td>0</td><td>-2</td><td>1-3</td><td>能拖住强队但末段被打穿</td></tr><tr><td>伊拉克</td><td>1</td><td>0</td><td>-3</td><td>1-4</td><td>有射门量但防空和后程问题大</td></tr></tbody></table></div>
+<div class="footer">预测按 skill 口径转译：近期状态 40%、硬实力 30%、历史交锋 15%、情境因素 15%，单方胜率不超过 85%。仅用于球迷讨论，不构成投注建议。</div>
+</main></body>
+</html>
